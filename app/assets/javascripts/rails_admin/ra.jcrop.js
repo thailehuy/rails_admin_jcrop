@@ -78,7 +78,7 @@
 
           thumb = widget.element.find('a.jcrop_handle').data('thumb');
           widget.element.find('a.thumbnail > img').removeAttr('src').attr('src', json.urls[thumb] + '?' + new Date().valueOf());
-
+          widget.element.find('img.img-polaroid').removeAttr('src').attr('src', json.urls[thumb] + '?' + new Date().valueOf());
           widget._trigger("success");
           dialog.modal("hide");
         }
